@@ -1,0 +1,18 @@
+class Solution:
+    # @param A : list of integers
+    # @return a list of two integers
+    def solve(self, A):
+        positive_count = sum(1 for num in A if num > 0)  # Count positives
+        negative_count = sum(1 for num in A if num < 0)  # Count negatives
+        return [positive_count, negative_count]
+
+if __name__ == "__main__":
+    solution = Solution()
+
+    input_array1 = [1, 2, 3]
+    output1 = solution.solve(input_array1)
+    print("Output 1:", output1)  
+
+    input_array2 = [1, 0, -1]
+    output2 = solution.solve(input_array2)
+    print("Output 2:", output2)  
